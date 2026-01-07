@@ -1,8 +1,13 @@
 import * as Donut from "./scripts/donut.js";
 
 const donut = new Donut.AsciiDonut(
-  document.getElementById("donut"),
-  document.querySelector(".donut-container")
+  document.getElementById("donut")
 );
+
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+  });
+});
 
 donut.start();

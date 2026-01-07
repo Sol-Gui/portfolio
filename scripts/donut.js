@@ -1,14 +1,13 @@
 export class AsciiDonut {
-  constructor(pre, container) {
+  constructor(pre) {
     this.pre = pre;
-    this.container = container;
 
     this.width;
     this.height;
     this.chars = " .:-=+*#%@";
 
     this.R1; // espessura
-    this.R2;    // raio
+    this.R2; // raio
 
     this.rotationSpeedA = 0.02;
     this.rotationSpeedB = 0.01;
@@ -58,7 +57,7 @@ export class AsciiDonut {
     this.width = Math.round(screenWidth / 7.5);
     this.height = Math.round(screenHeight / 15);
     this.R1 = (screenWidth / 2000) + (screenHeight / 2000);
-    this.R2 = (screenWidth / 300) + (screenHeight / 200);
+    this.R2 = (screenWidth / 250) + (screenHeight / 250);
 
     console.log(this.R1);
 
