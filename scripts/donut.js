@@ -10,8 +10,8 @@ export class AsciiDonut {
     this.R1; // espessura
     this.R2;    // raio
 
-    this.rotationSpeedA = 0.03;
-    this.rotationSpeedB = 0.015;
+    this.rotationSpeedA = 0.02;
+    this.rotationSpeedB = 0.01;
 
     this.A = 0;
     this.B = 0;
@@ -52,12 +52,12 @@ export class AsciiDonut {
 
   renderFrame() {
 
-    const screenWidth = window.screen.width;
-    const screenHeight = window.screen.height;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
 
     this.width = Math.round(screenWidth / 7.5);
-    this.height = Math.round(screenHeight / 20);
-    this.R1 = (screenWidth / 3000) + (screenHeight / 2000);
+    this.height = Math.round(screenHeight / 15);
+    this.R1 = (screenWidth / 2000) + (screenHeight / 2000);
     this.R2 = (screenWidth / 300) + (screenHeight / 200);
 
     console.log(this.R1);
@@ -97,6 +97,6 @@ export class AsciiDonut {
   }
 
   start() {
-    setInterval(() => this.renderFrame(), 25);
+    setInterval(() => this.renderFrame(), 35);
   }
 }
