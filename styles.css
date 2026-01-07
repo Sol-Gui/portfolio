@@ -1,0 +1,70 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #00091d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.stripe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfe0e2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 10;
+  width: 50vw;
+  border-radius: 0.25rem;
+  height: 7vh;
+  border: #e3d3d3;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 2px 2px #bd5151;
+}
+
+.stripe h1 {
+  font-size: 1.5rem;
+  color: #211d1d;
+  font-weight: 500;
+}
+
+.about-me-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  width: 85%;
+  height: 60%;
+}
+
+#donut {
+  position: absolute;
+  width: auto;
+  height: auto;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  user-select: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.75;
+}
