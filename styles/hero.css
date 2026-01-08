@@ -1,0 +1,107 @@
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(2vh);
+        animation-timing-function: ease-out;
+        opacity: 0.75;
+    }
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+#donut {
+    position: absolute;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: rgba(0, 255, 136, 0.25);
+    text-shadow: 0 0 5px rgb(2, 232, 125);
+    user-select: none;
+    transition: all 0.1s ease;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.stripe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    height: 7vh;
+    margin-bottom: 1rem;
+}
+
+.stripe #introduction {
+    font-size: clamp(2rem, 8vw, 4rem);
+    color: #feecec;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgb(5, 5, 5);
+}
+
+.stripe #carrer {
+    background-image: linear-gradient(90deg,
+            #3b6cff,
+            #5fa8ff,
+            #8ccfff,
+            #5fa8ff,
+            #3b6cff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.basic-info-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    width: 85%;
+    height: 60%;
+}
+
+#scroll-wrapper {
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #eae8e8;
+    width: auto;
+    height: auto;
+    animation: bounce 2s infinite;
+}
+
+#scroll-icon {
+    width: 2rem;
+    height: 2rem;
+}

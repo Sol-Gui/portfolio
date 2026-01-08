@@ -1,4 +1,5 @@
 import * as Donut from "./scripts/donut.js";
+import { initProjectsModal } from "./scripts/projects-modal.js";
 
 const donut = new Donut.AsciiDonut(
   document.getElementById("donut")
@@ -11,3 +12,4 @@ window.addEventListener('load', () => {
 });
 
 donut.start();
+initProjectsModal();

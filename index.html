@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guilherme Marques</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/projects.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/responsivity.css">
   <script type="module" src="script.js"></script>
 </head>
+
 <body>
 
-  <header>
-    <a href="#hero"><h1>Guilherme R.</h1></a>
-    <a href="#about-me-section"><span>About me</span></a>
-    <a href="#projects-section"><span>Projects</span></a>
-    <a href="#contact-me-section"><span>Contact me</span></a>
+  <header id="main-header">
+    <div class="header-container">
+      <a href="#hero" class="logo">
+        <h1>Guilherme R.</h1>
+      </a>
+
+      <div class="header-links">
+        <a href="#about-me-section" class="header-link">About me</a>
+        <a href="#projects-section" class="header-link">Projects</a>
+        <a href="#contact-me-section" class="header-link">Contact me</a>
+      </div>
+    </div>
   </header>
 
   <div class="dots-bg"></div>
@@ -41,20 +56,125 @@
   </section>
 
   <section id="about-me-section">
-    <h1 id="about-me-introduction">About Me</h1>
-    <div id="about-me-container">
+    <div class="about-me-container">
+      <div class="about-me-left">
+        <h2 class="about-me-title">Lorem ipsum dolor sit amet</h2>
+        <p class="about-me-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+        <p class="about-me-text">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident.
+        </p>
+        <div class="about-me-buttons">
+          <a href="#contact-me-section" class="btn btn-primary">Get in Touch</a>
+          <a href="#" class="btn btn-secondary">Download CV</a>
+        </div>
+      </div>
 
-      <div class="about-me-card"></div>
-      <div class="about-me-card"></div>
-      <div class="about-me-card"></div>
-      <div class="about-me-card"></div>
+      <div class="about-me-right">
+        <!-- Social Links Row -->
+        <div class="social-row">
+          <a href="#" class="social-bubble" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="social-icon">
+          </a>
+          <a href="#" class="social-bubble" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" class="social-icon">
+          </a>
+          <a href="mailto:seuemail@example.com" class="social-bubble" target="_blank" rel="noopener noreferrer"
+            aria-label="Email">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/mail.png" alt="Email" class="social-icon">
+          </a>
+        </div>
 
+        <!-- Tech Stack Card -->
+        <div class="tech-stack-card">
+          <div class="tech-stack-icon">
+            <img src="https://img.icons8.com/ios-filled/50/a78bfa/code.png" alt="Code" class="tech-stack-img">
+          </div>
+          <div class="tech-stack-content">
+            <h3 class="tech-stack-title">Development Skills</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="projects-section">
-    <h1 style="color: #FFFFFF">Seção de projetos</h1>
+    <div class="projects-container">
+      <h2 class="projects-title">My projects</h2>
 
+      <div class="projects-grid">
+        <div class="project-card" data-project="1">
+          <div class="project-image">
+            <img src="https://placehold.co/600x300/1e293b/a78bfa?text=Project+1" alt="Project 1">
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <a href="#" class="project-name">project-name-one</a>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+            <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt.</p>
+            <button class="project-details-btn" onclick="openModal(1)">View Details</button>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="2">
+          <div class="project-image">
+            <img src="https://placehold.co/600x300/1e293b/a78bfa?text=Project+2" alt="Project 2">
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <a href="#" class="project-name">project-name-two</a>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Django</span>
+              <span class="project-tag">PostgreSQL</span>
+            </div>
+            <p class="project-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip.</p>
+            <button class="project-details-btn" onclick="openModal(2)">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="project-modal" class="modal-overlay" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div id="modal-image" class="modal-image"></div>
+        <h2 id="modal-title" class="modal-title">Project Name</h2>
+        <div id="modal-tags" class="modal-tags"></div>
+        <div class="modal-body">
+          <h3>Purpose</h3>
+          <p id="modal-purpose">Project purpose description here.</p>
+          <h3>Features</h3>
+          <ul id="modal-features">
+            <li>Feature 1</li>
+          </ul>
+          <div class="modal-links">
+            <a id="modal-github" href="#" class="btn btn-primary" target="_blank">View on GitHub</a>
+            <a id="modal-demo" href="#" class="btn btn-secondary" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact-me-section">
@@ -63,4 +183,5 @@
   </section>
 
 </body>
+
 </html>

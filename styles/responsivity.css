@@ -1,0 +1,134 @@
+@media (max-width: 968px) {
+    .about-me-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-me-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-row {
+        justify-content: center;
+    }
+
+    .tech-stack-card {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+        height: 65px;
+        gap: 1rem;
+    }
+
+    .header-links {
+        gap: 1.5rem;
+    }
+
+    .header-link {
+        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    }
+
+    .logo h1 {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+    }
+
+    #about-me-section {
+        padding: 6rem 1.5rem 3rem;
+    }
+
+    .about-me-container {
+        gap: 2.5rem;
+    }
+
+    .about-me-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 1rem 1.25rem;
+        height: 3.75rem;
+        gap: 0.75rem;
+    }
+
+    .header-links {
+        gap: 1rem;
+    }
+
+    .header-link {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+    }
+
+    .logo h1 {
+        font-size: clamp(1rem, 5vw, 1.3rem);
+    }
+
+    #about-me-section {
+        padding: 5rem 1.25rem 2.5rem;
+    }
+
+    .about-me-right {
+        gap: 1rem;
+    }
+
+    .social-row {
+        gap: 0.75rem;
+    }
+
+    .tech-stack-card {
+        padding: 0.875rem;
+        gap: 0.75rem;
+    }
+
+    .tech-stack-title {
+        font-size: 0.9rem;
+    }
+
+    .tech-stack-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-container {
+        padding: 0.9rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .header-links {
+        gap: 0.75rem;
+    }
+
+    .header-link {
+        font-size: 0.8rem;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    #about-me-section {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .tech-stack-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,228 @@
+#projects-section {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 6rem 2rem;
+    box-sizing: border-box;
+}
+
+.projects-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.projects-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 0 2rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.project-image {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 1.25rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.project-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.project-name:hover {
+    color: #a78bfa;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    background: rgba(139, 92, 246, 0.2);
+    color: #c4b5fd;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+}
+
+.project-details-btn {
+    background: transparent;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    color: #a78bfa;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.project-details-btn:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.6);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+}
+
+.modal-image {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    padding-right: 2rem;
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.modal-body p {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.modal-body ul {
+    color: #d1d5db;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
