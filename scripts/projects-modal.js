@@ -1,21 +1,23 @@
+const githubLink = "https://github.com/Sol-Gui";
+
 const projectsData = {
     1: {
-        name: "project-name-one",
-        tags: ["React", "Node.js", "MongoDB"],
+        name: "JacacultMap",
+        tags: ["TypeScript", "React Native", "Node.js", "MongoDB", "Express"],
         image: "https://placehold.co/600x300/1e293b/a78bfa?text=Project+1",
         purpose: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         features: ["Feature placeholder 1", "Feature placeholder 2", "Feature placeholder 3", "Feature placeholder 4"],
-        github: "https://github.com/",
-        demo: "https://example.com"
+        github: `${githubLink}/JacacultMap`,
+        demo: "https://JacacultMap-app.vercel.app/"
     },
     2: {
-        name: "project-name-two",
-        tags: ["Python", "Django", "PostgreSQL"],
+        name: "ZMiniChain",
+        tags: ["Java", "WebSocket", "PostgreSQL", "React", "TypeScript"],
         image: "https://placehold.co/600x300/1e293b/a78bfa?text=Project+2",
         purpose: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         features: ["Feature placeholder 1", "Feature placeholder 2", "Feature placeholder 3"],
-        github: "https://github.com/",
-        demo: "https://example.com"
+        github: `${githubLink}/ZMiniChain-APP`,
+        demo: "https://ZMiniChain-app.vercel.app/"
     }
 };
 

@@ -24,7 +24,7 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -88,17 +88,18 @@
 }
 
 .project-tag {
-    background: rgba(139, 92, 246, 0.2);
-    color: #c4b5fd;
+    background: rgba(139, 92, 246, 0.25);
+    color: #ded6fe;
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
     font-size: 0.75rem;
     font-weight: 500;
+    border: 1px solid rgba(139, 92, 246, 0.4);
 }
 
 .project-description {
     font-size: 0.9rem;
-    color: #9ca3af;
+    color: #e2e8f0;
     line-height: 1.5;
     margin: 0 0 1rem 0;
 }
