@@ -5,8 +5,8 @@ const projectsData = {
         name: "JacacultMap",
         tags: ["TypeScript", "React Native", "Node.js", "MongoDB", "Express"],
         image: "https://placehold.co/600x300/1e293b/a78bfa?text=Project+1",
-        purpose: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        features: ["Feature placeholder 1", "Feature placeholder 2", "Feature placeholder 3", "Feature placeholder 4"],
+        purpose: "The purpose of JacacultMap is to help users discover and track the locations of cultural events in an easy and accessible way.",
+        features: ["Event discovery by location", "Mobile and web support", "Event tracking", "Front-end is blocked when the back-end is down for security and usability."],
         github: `${githubLink}/JacacultMap`,
         demo: "https://JacacultMap-app.vercel.app/"
     },
@@ -14,8 +14,8 @@ const projectsData = {
         name: "ZMiniChain",
         tags: ["Java", "WebSocket", "PostgreSQL", "React", "TypeScript"],
         image: "https://placehold.co/600x300/1e293b/a78bfa?text=Project+2",
-        purpose: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        features: ["Feature placeholder 1", "Feature placeholder 2", "Feature placeholder 3"],
+        purpose: "The purpose of ZMiniChain is to provide a local blockchain simulation similar to Ganache, designed for learning and testing purposes.",
+        features: ["Local development blockchain environment", "Instant block mining simulation", "Transaction and block handling", "Pure Java API developed from scratch"],
         github: `${githubLink}/ZMiniChain-APP`,
         demo: "https://ZMiniChain-app.vercel.app/"
     }
