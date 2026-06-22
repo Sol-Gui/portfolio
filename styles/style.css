@@ -1,0 +1,122 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+    --background-color: #292C3D;
+    --default-text-color: #CBCDE9;
+    --header-background-color: rgba(15, 23, 42, 0.3);
+    --default-text-highlight-color1: #09acc1;
+}
+
+body {
+    height: 1000vh;
+    width: 100vw;
+    color: var(--default-text-color);
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: var(--background-color);
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 3rem 0.05rem 3rem;
+    /* background-color: #0f172a; */
+    background-color: var(--header-background-color);
+    font-size: 1rem;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    top: 0;
+    position: sticky;
+}
+
+.header a {
+    all: unset;
+    cursor: pointer;
+}
+
+.header__terminal-logo {
+    justify-content: center;
+    align-items: center;
+    color: var(--default-text-highlight-color1);
+    font-weight: 600;
+}
+
+.header__terminal-logo::after {
+    content: '|';
+    margin-left: 0.25rem;
+    animation: blink 1.5s step-start infinite;
+}
+
+.header__nav {
+    display: flex;
+    gap: 5rem;
+}
+
+.header__nav h3:hover{
+    color: var(--default-text-highlight-color1);
+    cursor: pointer;
+    transition: color 0.5s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+.hero {
+    width: 100%;
+    box-sizing:border-box;
+    align-items: flex-start;
+    padding-inline: clamp(3rem, 10vw, 10rem);
+    padding-top: 10rem;
+}
+
+
+.hero__title {
+    font-size: 4rem;
+    max-width: clamp(1.5rem, 70vw, 70ch);
+}
+
+.hero__name {
+    color: var(--default-text-highlight-color1);
+    opacity: 0.85;
+}
+
+.hero__subtitle {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #aeaeb5;
+    max-width: clamp(1.5rem, 50vw, 50ch);
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 0.25rem 3rem 0.05rem 1.5rem;
+    }
+    .hero__title {
+        font-size: clamp(3rem, 6rem, 8vw);
+    }
+
+    .hero__subtitle {
+        font-size: 1.4rem;
+        max-width: clamp(2rem, 90vw, 90ch);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .hero__title {
+        font-size: 1.75rem
+    }
+
+    .hero__subtitle {
+        font-size: 1.5rem;
+    }
+}
