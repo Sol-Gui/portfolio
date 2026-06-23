@@ -6,6 +6,7 @@
         <title>Guilherme Marques</title>
         <link rel="stylesheet" href="styles/style.css">
         <script type="module" src="scripts/i18n.js" defer></script>
+        <script src="scripts/terminal.js"></script>
         <script src="scripts/script.js" defer></script>
     </head>
     <body>
@@ -19,15 +20,42 @@
             </nav>
         </header>
         <section id="hero" class="hero">
-            <h1 class="hero__title">
-                <span class="hero__title-text">Hello! I'm </span>
-                <span class="hero__name">Guilherme</span>
-            </h1>
-            <h2 class="hero__subtitle">
-                Brazilian Backend Developer, 
-                Computer Science Student, 
-                Looking For an Internship.
-            </h2>
+            <div class="hero__info-container">
+                <h1 class="hero__info-container__title">
+                    <span class="hero__title-text">Hello! I'm </span>
+                    <span class="hero__name">Guilherme</span>
+                </h1>
+                <h2 class="hero__info-container__subtitle">
+                    Computer Science student at UNIFESP and backend developer dedicated to high-performance 
+                    systems and low-level engineering. Driven by a lifelong curiosity to understand how things 
+                    work under the hood, I build efficient, scalable backend architectures from the inside out.
+                </h2>
+            </div>
+            <div class="hero__terminal">
+                <terminal-window id="term"></terminal-window>
+                <div class="hero__terminal__info-card" id="terminal-info-card" style="display: none;">
+                    
+                </div>
+            </div>
         </section>
+        <script defer>
+            async function runTerminal() {
+                const term = document.getElementById('term').api;
+
+                await term.type('gui@unifesp:~$ ',      { cls: 'prompt' });
+                await term.type('sudo status --verbose', { cls: 'cmd', speed: 55 });
+                await term.newline();
+                await term.print('[sudo] password for gui: ······', { cls: 'cyan',  delay: 400 });
+                await term.print('● Fetching profile data...',        { cls: 'cmd',   delay: 400 });
+                await term.print('✔ Connection established',          { cls: 'ok',    delay: 100 });
+                await term.print('✔ Status: CS STUDENT @ UNIFESP',   { cls: 'ok',    delay: 100 });
+                await term.print('✔ Focus: Backend & Low-level',     { cls: 'ok',    delay: 100 });
+
+                await term.reveal('#terminal-info-card', 300);
+            }
+            document.addEventListener('DOMContentLoaded', async () => {
+                runTerminal();
+            });
+        </script>
     </body>
 </html>

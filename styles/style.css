@@ -7,6 +7,7 @@ html {
     --default-text-color: #CBCDE9;
     --header-background-color: rgba(15, 23, 42, 0.3);
     --default-text-highlight-color1: #09acc1;
+    --default-text-highlight-color2: rgb(219, 110, 77);
 }
 
 body {
@@ -66,17 +67,29 @@ body {
 }
 
 .hero {
+    display: flex;
     width: 100%;
     box-sizing:border-box;
     align-items: flex-start;
-    padding-inline: clamp(3rem, 10vw, 10rem);
+    padding-inline: clamp(5rem, 15vw, 15rem);
     padding-top: 10rem;
+    gap: 10vw;
+}
+
+.hero__info-container {
+    top: 0;
+    display: column;
+    justify-content: flex-start;
+    height: auto;
 }
 
 
-.hero__title {
-    font-size: 4rem;
-    max-width: clamp(1.5rem, 70vw, 70ch);
+.hero__info-container__title {
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+    max-width: clamp(1.5rem, 50vw, 50ch);
 }
 
 .hero__name {
@@ -84,13 +97,24 @@ body {
     opacity: 0.85;
 }
 
-.hero__subtitle {
-    font-size: 3rem;
+.hero__info-container__subtitle {
+    font-size: 1.5rem;
     font-weight: 500;
     color: #aeaeb5;
-    max-width: clamp(1.5rem, 50vw, 50ch);
+    max-width: clamp(1.5rem, 60vw, 60ch);
 }
 
+.hero__terminal {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.hero__terminal__info-card {
+    padding: 10;
+}
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -101,22 +125,55 @@ body {
     .header {
         padding: 0.25rem 3rem 0.05rem 1.5rem;
     }
-    .hero__title {
+    .hero__info-container__title {
         font-size: clamp(3rem, 6rem, 8vw);
     }
 
-    .hero__subtitle {
+    hero__info-container__subtitle {
         font-size: 1.4rem;
         max-width: clamp(2rem, 90vw, 90ch);
     }
 }
 
 @media screen and (max-width: 300px) {
-    .hero__title {
+    .hero__info-container__title {
         font-size: 1.75rem
     }
 
-    .hero__subtitle {
+    hero__info-container__subtitle {
         font-size: 1.5rem;
     }
+}
+
+/* ── Terminal component ─────────────────────────────────────────────────────── */
+
+terminal-window {
+    display: block;
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    padding: 1rem;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: #cdd6f4;
+    width: 100%;
+}
+
+.tw-line {
+    display: block;
+    min-height: 1.75em;
+}
+
+.tw-line .prompt { color: var(--default-text-highlight-color1); }
+.tw-line .cmd    { color: var(--default-text-color); }
+.tw-line .ok     { color: var(--default-text-highlight-color2) }
+.tw-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1em;
+    background: #cdd6f4;
+    vertical-align: -0.15em;
+    margin-left: 1px;
+    animation: blink 1.1s step-end infinite;
 }
