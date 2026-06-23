@@ -8,6 +8,7 @@
         <script type="module" src="scripts/i18n.js" defer></script>
         <script src="scripts/terminal.js"></script>
         <script src="scripts/script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
     <body>
         <header class="header">
@@ -26,15 +27,79 @@
                     <span class="hero__name">Guilherme</span>
                 </h1>
                 <h2 class="hero__info-container__subtitle">
-                    Computer Science student at UNIFESP and backend developer dedicated to high-performance 
-                    systems and low-level engineering. Driven by a lifelong curiosity to understand how things 
-                    work under the hood, I build efficient, scalable backend architectures from the inside out.
+                    Science and Technology student at <span>UNIFESP</span> specializing in Computer Science and <span>backend developer</span> 
+                    dedicated to <span>high-performance systems</span> and <span>low-level engineering</span>. 
+                    Driven by a lifelong curiosity to understand how things work <span>under the hood</span>, 
+                    I build efficient, <span>scalable backend architectures</span> from the inside out.
                 </h2>
+                <div class="hero__info-container__socials">
+                    <a href="https://www.linkedin.com/in/gui-r-marques/" target="_blank">
+                        <i class="fa-brands fa-linkedin linkedin-icon"></i><p>LinkedIn</p>
+                    </a>
+                    <a href="https://github.com/Sol-Gui" target="_blank">
+                        <i class="fa-brands fa-github github-icon"></i><p>GitHub</p>
+                    </a>
+                </div>
             </div>
             <div class="hero__terminal">
-                <terminal-window id="term"></terminal-window>
-                <div class="hero__terminal__info-card" id="terminal-info-card" style="display: none;">
-                    
+                <terminal-window id="term">
+                    <div class="hero__info-card" id="terminal-info-card" style="display: none;">
+
+                        <div class="hero__info-card-profile">
+                            <div class="hero__info-card-avatar">
+                                GM
+                            </div>
+
+                            <div class="hero__info-card-identity">
+                                <h3 class="hero__info-card-name">
+                                    Guilherme Marques
+                                </h3>
+
+                                <p class="hero__info-card-role">
+                                    Science and Technology @ UNIFESP
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hero__info-card-details">
+
+                            <div class="hero__info-card-detail">
+                                <i class="fa-solid fa-code"></i>
+                                <span>Backend Engineering</span>
+                            </div>
+
+                            <div class="hero__info-card-detail">
+                                <i class="fa-solid fa-microchip"></i>
+                                <span>Low-level Systems</span>
+                            </div>
+
+                            <div class="hero__info-card-detail">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>2026 — 2028</span>
+                            </div>
+
+                        </div>
+
+                        <div class="hero__info-card-stats">
+
+                            <div class="hero__info-card-stat">
+                                <span>Elapsed</span>
+                                <h4>5 Months 13 Days</h4>
+                            </div>
+
+                            <div class="hero__info-card-stat">
+                                <span>Remaining</span>
+                                <h4>30 Months 17 Days</h4>
+                            </div>
+
+                        </div>
+
+                        <p class="hero__info-card-update">
+                            Last update: June 23, 2026
+                        </p>
+
+                    </div>
+                </terminal-window>
                 </div>
             </div>
         </section>
@@ -42,10 +107,10 @@
             async function runTerminal() {
                 const term = document.getElementById('term').api;
 
-                await term.type('gui@unifesp:~$ ',      { cls: 'prompt' });
+                await term.type('gui@developer:~$ ',      { cls: 'prompt' });
                 await term.type('sudo status --verbose', { cls: 'cmd', speed: 55 });
                 await term.newline();
-                await term.print('[sudo] password for gui: ······', { cls: 'cyan',  delay: 400 });
+                await term.print('[sudo] password for gui: ······', { cls: 'cyan',  delay: 300 });
                 await term.print('● Fetching profile data...',        { cls: 'cmd',   delay: 400 });
                 await term.print('✔ Connection established',          { cls: 'ok',    delay: 100 });
                 await term.print('✔ Status: CS STUDENT @ UNIFESP',   { cls: 'ok',    delay: 100 });

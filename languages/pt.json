@@ -5,5 +5,8 @@
     "header__nav-change-language": "Mudar idioma",
     "hero__title-text": "Olá! Me chamo ",
     "hero__name": "Guilherme",
-    "hero__subtitle": "Desenvolvedor Backend Brasileiro, Estudante de Ciência da Computação, Em busca de estágio."
+    "hero__info-container__subtitle": [
+    "Estudante de Ciência e Tecnologia na UNIFESP, com foco em Ciência da Computação, e desenvolvedor backend apaixonado por sistemas de alto desempenho",
+    "e engenharia de baixo nível. Movido pela curiosidade de entender como as coisas",
+    "funcionam sob o capô, construo arquiteturas backend eficientes, robustas e escaláveis."]
 }
