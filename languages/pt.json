@@ -6,7 +6,13 @@
     "hero__title-text": "Olá! Me chamo ",
     "hero__name": "Guilherme",
     "hero__info-container__subtitle": [
-    "Estudante de Ciência e Tecnologia na UNIFESP, com foco em Ciência da Computação, e desenvolvedor backend apaixonado por sistemas de alto desempenho",
-    "e engenharia de baixo nível. Movido pela curiosidade de entender como as coisas",
-    "funcionam sob o capô, construo arquiteturas backend eficientes, robustas e escaláveis."]
+        "Estudante de Ciência e Tecnologia na <span>UNIFESP</span>,",
+        "com foco em <span>Ciência da Computação</span>,",
+        "e <span>desenvolvedor backend</span>",
+        "apaixonado por <span>sistemas de alto desempenho</span>",
+        "e <span>engenharia de baixo nível</span>.",
+        "Movido pela curiosidade de entender como as coisas",
+        "funcionam <span></span>,",
+        "construo <span>arquiteturas backend eficientes</span> robustas e escaláveis."
+    ]
 }

@@ -17,7 +17,11 @@ const ptBrTimeZones = [
 function setLang(lang) {
     Object.keys(translations[lang]).forEach(className => {
         document.querySelectorAll('.' + className).forEach(el => {
-            el.textContent = translations[lang][className];
+            const value = translations[lang][className];
+
+            el.innerHTML = Array.isArray(value)
+                ? value.join(' ')
+                : value;
         });
     });
     localStorage.setItem('lang', lang);

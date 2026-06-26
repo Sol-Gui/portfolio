@@ -4,7 +4,7 @@ html {
 
 
 :root {
-    --default-background-color: #292C3D;
+    --default-background-color: #1e1e2e;
     --default-text-color1: #CBCDE9;
     --default-text-color2: #cccfdc;
     --header-background-color: rgba(15, 23, 42, 0.3);
@@ -14,7 +14,7 @@ html {
     --default-icons-color: rgb(210, 206, 206);
 }
 
-
+    
 body {
     height: 1000vh;
     width: 100vw;
@@ -31,6 +31,18 @@ body {
 a {
     all: unset;
     cursor: pointer;
+}
+
+.dots-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(circle, #868994 2px, transparent 2px);
+    background-size: 3vw 3vw;
+    opacity: 0.3;
+    z-index: -1;
 }
 
 
@@ -133,6 +145,13 @@ a {
     color: #14161c;
 }
 
+.hero__info-container__subtitle #fyera-link {
+    text-decoration-color: var(--default-text-highlight-color1);
+}
+
+.hero__info-container__subtitle #fyera-link:hover {
+    background-color: var(--default-text-highlight-color1);
+}
 
 .hero__info-container__socials {
     width: auto;
@@ -178,6 +197,10 @@ a {
     font-size: 2rem;
 }
 
+.open-to-work i,
+.open-to-work p {
+    color: var(--default-text-highlight-color1);
+}
 
 .hero__terminal {
     display: flex;
@@ -298,32 +321,21 @@ terminal-window {
 
 .hero__info-card-avatar {
 
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
 
     border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-weight: 700;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--default-text-highlight-color1),
-            var(--default-text-highlight-color2)
-        );
 }
 
 .hero__info-card-name {
 
     margin: 0;
 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
     color: var(--default-text-color1);
 }

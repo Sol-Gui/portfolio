@@ -6,7 +6,15 @@
     "hero__title-text": "Hello! I'm ",
     "hero__name": "Guilherme",
     "hero__info-container__subtitle": [
-    "Science and Technology student at UNIFESP specializing in Computer Science and and backend developer dedicated to high-performance ",
-    "systems and low-level engineering. Driven by a lifelong curiosity to understand how things", 
-    "work under the hood, I build efficient, scalable backend architectures from the inside out."]
+        "Science and Technology student at <span>UNIFESP</span>,",
+        "focused on Computer Science and",
+        "<span>backend development</span>.",
+        "Currently building <a href='https://fyera.dev' target='_blank' rel='noopener noreferrer'><span id=\"fyera-link\">Fyera</span></a>,",
+        "a personal AI-powered financial assistant —",
+        "working with",
+        "<span>Java</span>, <span>Spring</span>,",
+        "<span>TypeScript</span>, <span>Node.js</span> and <span>Python</span>.",
+        "Interested in <span>low-level engineering</span>",
+        "and exploring <span>Rust</span>."
+    ]
 }
