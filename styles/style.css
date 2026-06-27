@@ -39,9 +39,9 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(circle, #868994 2px, transparent 2px);
-    background-size: 3vw 3vw;
-    opacity: 0.3;
+    background-image: radial-gradient(circle, #6b6d75 0.15rem, transparent 1px);
+    background-size: 5vh 5vh;
+    opacity: 0.15;
     z-index: -1;
 }
 
@@ -94,9 +94,9 @@ a {
     width: 100%;
     box-sizing:border-box;
     align-items: flex-start;
-    padding: 0 clamp(5rem, 10vw, 10em) 0 clamp(5rem, 15vw, 15rem);
+    padding: 0 clamp(5rem, 10vw, 10em) 0 clamp(5rem, 10vw, 15rem);
     padding-top: 10rem;
-    gap: 5vw;
+    gap: 10vw;
 }
 
 
@@ -424,4 +424,58 @@ terminal-window {
     font-size: 1.25rem;
 
     color: var(--default-text-highlight-color1);
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.projects h1 {
+    margin-top: 20vh;
+    font-size: 2rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10vw 0 10vw;
+    gap: 10vw;
+}
+
+
+.projects-terminal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    width: 30vw;
+    height: 15vw;
+    border-radius: 1.5rem;
+}
+
+
+.projects-interface {
+    background-color: #37394b;
+    border-radius: 1.5rem;
+    width: 28vw;
+    height: 13vw;
+}
+
+.projects-interface h2 {
+    margin-left: 2rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--default-text-highlight-color2);
+}
+
+.projects-interface h3 {
+    margin-left: 2rem;
+    font-size: 1rem;
+    max-width: 70%;
+    font-weight: 400;
+    color: #FFFFFF;
 }

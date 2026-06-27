@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+    <title id="title">JacaCultMap static project placeholder</title>
+    <desc id="desc">A static terminal-inspired placeholder reserved for future real project screenshots.</desc>
+    <rect width="960" height="540" fill="#0d0d0d"/>
+    <rect x="1" y="1" width="958" height="538" rx="12" fill="none" stroke="#5f6163" stroke-width="2"/>
+    <circle cx="42" cy="42" r="8" fill="#08bcd3"/>
+    <circle cx="70" cy="42" r="8" fill="#7c83ff"/>
+    <circle cx="98" cy="42" r="8" fill="#CBCDE9" opacity=".45"/>
+    <path d="M80 130h800M80 190h520M80 250h650M80 310h430" stroke="#CBCDE9" stroke-width="10" stroke-linecap="round" opacity=".2"/>
+    <path d="M80 390h230" stroke="#08bcd3" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+    <path d="M342 390h170" stroke="#7c83ff" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+    <text x="80" y="108" fill="#08bcd3" font-family="IBM Plex Mono, JetBrains Mono, monospace" font-size="28" font-weight="700">JacaCultMap</text>
+    <text x="80" y="458" fill="#CBCDE9" font-family="IBM Plex Mono, JetBrains Mono, monospace" font-size="22" opacity=".7">real screenshots pending</text>
+</svg>
