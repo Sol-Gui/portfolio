@@ -13,6 +13,9 @@
     <body>
         <header class="header">
             <h2><span class="header__terminal-logo animated-text">gui@developer:~$</span></h2>
+            <button class="header__nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <nav class="header__nav">
                 <a href="#hero"><h3 class="header__nav-home">Home</h3></a>
                 <a href="#projects"><h3 class="header__nav-projects">Projects</h3></a>
@@ -26,15 +29,10 @@
         <section id="hero" class="hero">
             <div class="hero__info-container">
                 <h1 class="hero__info-container__title">
-                    <span class="hero__title-text">Hello! I'm </span>
-                    <span class="hero__name">Guilherme</span>
+                    <span class="hero__title-text"></span>
+                    <span class="hero__name"></span>
                 </h1>
-                <h2 class="hero__info-container__subtitle">
-                    Science and Technology student at <span>UNIFESP</span> specializing in Computer Science and <span>backend developer</span> 
-                    dedicated to <span>high-performance systems</span> and <span>low-level engineering</span>. 
-                    Driven by a lifelong curiosity to understand how things work <span>under the hood</span>, 
-                    I build efficient, <span>scalable backend architectures</span> from the inside out.
-                </h2>
+                <h2 class="hero__info-container__subtitle"></h2>
                 <div class="hero__info-container__socials">
                     <a href="https://www.linkedin.com/in/gui-r-marques/" target="_blank">
                         <i class="fa-brands fa-linkedin linkedin-icon"></i><p>LinkedIn</p>
@@ -43,7 +41,7 @@
                         <i class="fa-brands fa-github github-icon"></i><p>GitHub</p>
                     </a>
                     <a href="#contact-me" class="open-to-work">
-                        <i class="fa-solid fa-briefcase"></i><p>Open to work</p>
+                        <i class="fa-solid fa-briefcase"></i><p class="hero__social-open-to-work"></p>
                     </a>
                 </div>
             </div>
@@ -52,17 +50,13 @@
                     <div class="hero__info-card" id="terminal-info-card" style="display: none;">
 
                          <div class="hero__info-card-profile">
-                            <img src="https://avatars.githubusercontent.com/u/177280156?s=400&u=4252e8dae775fe27f349f5d77b13835507336bc9&v=4" class="hero__info-card-avatar">
-                                
-                         </img>
+                            <img src="https://avatars.githubusercontent.com/u/177280156?s=400&u=4252e8dae775fe27f349f5d77b13835507336bc9&v=4" class="hero__info-card-avatar" alt="Guilherme Marques">
 
                             <div class="hero__info-card-identity">
                                 <h3 class="hero__info-card-name">
-                                    Guilherme Marques
                                 </h3>
 
                                 <p class="hero__info-card-role">
-                                    Science and Technology @ UNIFESP
                                 </p>
                             </div>
                         </div>
@@ -71,17 +65,17 @@
 
                             <div class="hero__info-card-detail">
                                 <i class="fa-solid fa-code"></i>
-                                <span>Backend Engineering</span>
+                                <span class="hero__info-card-detail-backend"></span>
                             </div>
 
                             <div class="hero__info-card-detail">
                                 <i class="fa-solid fa-microchip"></i>
-                                <span>Low-level Systems</span>
+                                <span class="hero__info-card-detail-systems"></span>
                             </div>
 
                             <div class="hero__info-card-detail">
                                 <i class="fa-solid fa-calendar"></i>
-                                <span>2026 — 2028</span>
+                                <span class="hero__info-card-detail-period"></span>
                             </div>
 
                         </div>
@@ -89,40 +83,55 @@
                         <div class="hero__info-card-stats">
 
                             <div class="hero__info-card-stat">
-                                <span>Elapsed</span>
-                                <h4>5 Months 13 Days</h4>
+                                <span class="hero__info-card-stat-elapsed-label"></span>
+                                <h4 class="hero__info-card-stat-elapsed-value"></h4>
                             </div>
 
                             <div class="hero__info-card-stat">
-                                <span>Remaining</span>
-                                <h4>30 Months 17 Days</h4>
+                                <span class="hero__info-card-stat-remaining-label"></span>
+                                <h4 class="hero__info-card-stat-remaining-value"></h4>
                             </div>
 
                         </div>
 
                         <p class="hero__info-card-update">
-                            Last update: June 23, 2026
                         </p>
 
                     </div>
                 </terminal-window>
-                </div>
             </div>
         </section>
         <section id="projects" class="projects">
-            <h1>View my main projects</h1>
+            <h1 class="projects__title"></h1>
             <div class="projects-container">
                 <terminal-window class="projects-terminal">
                     <div class="projects-interface">
-                        <h2>Sol-Gui / JacacultMap</h2> <i class="fa-solid fa-star"></i>
-                        <h3>Cultural events tracker for Jacareí, developed as Course thesis conclusion</h3>
-                        <h2>Node.Js / </h2>
+                        <div class="projects-interface__header">
+                            <div class="projects-interface__window-icons" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <h2 class="projects-interface__title-jacacultmap"></h2>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="projects-interface__description-jacacultmap"></h3>
+                        <p class="projects-interface__stack projects-interface__stack-jacacultmap"></p>
                     </div>
                 </terminal-window>
                 <terminal-window class="projects-terminal">
                     <div class="projects-interface">
-                        <h2>Sol-Gui / ZminiChain </h2> <i class="fa-solid fa-star"></i>
-                        <h3>Blockchain simulation with it's own restful agreggator</h3>
+                        <div class="projects-interface__header">
+                            <div class="projects-interface__window-icons" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <h2 class="projects-interface__title-zminichain"></h2>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="projects-interface__description-zminichain"></h3>
+                        <p class="projects-interface__stack projects-interface__stack-zminichain"></p>
                     </div>
                 </terminal-window>
             </div>

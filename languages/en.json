@@ -16,5 +16,23 @@
         "<span>TypeScript</span>, <span>Node.js</span> and <span>Python</span>.",
         "Interested in <span>low-level engineering</span>",
         "and exploring <span>Rust</span>."
-    ]
+    ],
+    "hero__social-open-to-work": "Open to work",
+    "hero__info-card-name": "Guilherme Marques",
+    "hero__info-card-role": "Science and Technology @ UNIFESP",
+    "hero__info-card-detail-backend": "Backend Engineering",
+    "hero__info-card-detail-systems": "Low-level Systems",
+    "hero__info-card-detail-period": "2026 - 2028",
+    "hero__info-card-stat-elapsed-label": "Elapsed",
+    "hero__info-card-stat-elapsed-value": "5 Months 13 Days",
+    "hero__info-card-stat-remaining-label": "Remaining",
+    "hero__info-card-stat-remaining-value": "30 Months 17 Days",
+    "hero__info-card-update": "Last update: June 23, 2026",
+    "projects__title": "View my main projects",
+    "projects-interface__title-jacacultmap": "<span class=\"projects-interface__owner\">Sol-Gui</span> / JacacultMap",
+    "projects-interface__description-jacacultmap": "Cultural events tracker for Jacarei, developed as Course thesis conclusion",
+    "projects-interface__stack-jacacultmap": "<span>Node.Js</span> /",
+    "projects-interface__title-zminichain": "<span class=\"projects-interface__owner\">Sol-Gui</span> / ZminiChain",
+    "projects-interface__description-zminichain": "Blockchain simulation with its own restful aggregator",
+    "projects-interface__stack-zminichain": "<span>Node.Js</span> /"
 }
