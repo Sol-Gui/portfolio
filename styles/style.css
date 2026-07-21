@@ -4,27 +4,40 @@ html {
 
 
 :root {
-    --default-background-color: #1e1e2e;
+    --default-background-color: #24252a;
     --default-text-color1: #CBCDE9;
-    --default-text-color2: #cccfdc;
+    --default-text-color2: #d5d9e9;
     --header-background-color: rgba(15, 23, 42, 0.3);
-    --default-text-highlight-color1: #08bcd3;
-    --default-text-highlight-color2: #7c83ff;
+    --default-text-highlight-color1: #0ad1ec;
+    --default-text-highlight-color2: #fb8b7f;
     --default-highlight-background-color: #0d0d0d;
     --default-icons-color: rgb(210, 206, 206);
     --default-terminal-border-color: #5f6163;
-    --default-subtle-surface-color: rgba(255,255,255,.03);
+    --default-subtle-surface-color: rgba(152, 148, 148, 0.125);
     --default-subtle-border-color: rgba(255,255,255,.05);
     --project-interface-background-color: #37394b;
     --project-interface-text-color: #FFFFFF;
     --project-star-color: #ffd43b;
     --project-accent-orange-color: #ffb86c;
     --font-size-sm: 0.75rem;
-    --font-size-md: 1rem;
+    --font-size-md: 0.8rem;
+    --font-size-base: 1rem;
     --font-size-lg: 1.25rem;
-    --font-size-2xl: 1.6rem;
+    --font-size-2xl: 1.4rem;
     --font-size-3xl: 2rem;
-    --font-size-4xl: 3rem;
+    --font-size-4xl: 2.5rem;
+}
+
+::selection {
+    background: var(--default-text-highlight-color2);
+    color: #0a0c0f;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: var(--default-text-highlight-color2);
+    color: #0a0c0f;
+    text-shadow: none;
 }
 
     
@@ -53,7 +66,7 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(circle, #6b6d75 0.15rem, transparent 1px);
+    background-image: radial-gradient(circle, rgba(107, 109, 117, 0.849).15rem, transparent 1px);
     background-size: 5vh 5vh;
     opacity: 0.15;
     z-index: -1;
@@ -128,10 +141,9 @@ a {
     width: 100%;
     box-sizing:border-box;
     align-items: flex-start;
-    padding: 0 clamp(5rem, 10vw, 10em) 0 clamp(5rem, 10vw, 15rem);
+    padding: 0 clamp(5rem, 8vw, 10em) 0 clamp(5rem, 8vw, 15rem);
     padding-top: 10rem;
     padding-bottom: 2rem;
-    gap: clamp(3rem, 8vw, 10vw);
 }
 
 
@@ -160,9 +172,9 @@ a {
 .hero__info-container__subtitle {
     line-height: 1.4;
     font-size: var(--font-size-2xl);
-    font-weight: 500;
+    font-weight: 400;
     color: var(--default-text-color2);
-    max-width: 60ch;
+    max-width: 55ch;
 }
 
 
@@ -175,11 +187,15 @@ a {
 }
 
 .hero__info-container__subtitle span:hover {
+    -webkit-transition: background-color 0.16s ease-in;
+          transition: background-color 0.16s ease-in;
+    cursor: default;
     background-color: var(--default-text-highlight-color2);
-    color: #14161c;
+    color: #0a0c0f;
 }
 
 .hero__info-container__subtitle #fyera-link {
+    cursor: pointer;
     text-decoration-color: var(--default-text-highlight-color1);
 }
 
@@ -191,6 +207,7 @@ a {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding-top: 1.5rem;
 }
 
 .hero__info-container__socials a:hover p,
@@ -213,7 +230,7 @@ a {
 
 .hero__info-container__socials p {
     color: var(--default-icons-color);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-ls);
     margin-left: 0.5rem;
 }
 
@@ -278,22 +295,22 @@ terminal-window {
 .hero__info-card {
     position: absolute;
     top: -0.25rem;
-    left: -1rem;
+    left: -0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 0.9rem;
+    gap: 1rem;
 
     background-color: var(--default-highlight-background-color);
     border-radius: 8px;
     border: 2px solid var(--default-terminal-border-color);
     padding: 1.1rem 0.9rem 0.9rem;
 
-    width: clamp(24rem, 42vw, 38rem);
-    max-width: none;
-    min-height: clamp(22rem, 34vw, 29rem);
-    box-sizing: border-box;
+    width: 110%;
+    max-width: 34rem;
+    height: auto;
+    box-sizing:  border-box;
     z-index: 2;
     overflow: visible;
 
@@ -342,7 +359,7 @@ terminal-window {
     flex-direction: row;
     align-items: center;
 
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .hero__info-card-avatar {
@@ -361,7 +378,7 @@ terminal-window {
 
     margin: 0;
 
-    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    font-size: var(--font-size-2xl);
 
     color: var(--default-text-color1);
 }
@@ -374,7 +391,7 @@ terminal-window {
 
     opacity: .8;
 
-    font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+    font-size: var(--font-size-base);
 }
 
 .hero__info-card-details {
@@ -382,7 +399,7 @@ terminal-window {
     display: flex;
     flex-direction: column;
 
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .hero__info-card-detail {
@@ -396,7 +413,7 @@ terminal-window {
 
     color: var(--default-text-color2);
 
-    font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+    font-size: var(--font-size-base);
 }
 
 .hero__info-card-detail i {
@@ -423,7 +440,7 @@ terminal-window {
 
 .hero__info-card-stat {
 
-    padding: 1rem;
+    padding: 0.5rem;
 
     border-radius: 18px;
 
@@ -437,8 +454,9 @@ terminal-window {
     display: block;
 
     margin-bottom: .5rem;
+    margin-left: .1rem;
 
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
 
     color: var(--default-text-color2);
 
@@ -449,13 +467,13 @@ terminal-window {
 
     margin: 0;
 
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: var(--font-size-lg);
 
     color: var(--default-text-highlight-color1);
 }
 
 .hero__info-card-update {
-    font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+    font-size: var(--font-size-base);
 }
 
 .projects {
