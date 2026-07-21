@@ -1,6 +1,8 @@
+const i18nRoot = document.body.dataset.i18nRoot || './';
+
 const [en, pt] = await Promise.all([
-    fetch('./languages/en.json').then(r => r.json()),
-    fetch('./languages/pt.json').then(r => r.json())
+    fetch(`${i18nRoot}languages/en.json`).then(r => r.json()),
+    fetch(`${i18nRoot}languages/pt.json`).then(r => r.json())
 ]);
 
 const translations = { en, pt };
@@ -37,8 +39,9 @@ const lang = savedLang ?? detectLang();
 setLang(lang);
 
 document.body.style.visibility = 'visible';
+document.body.classList.add('page-ready');
 
-document.querySelector('.header__nav-change-language').addEventListener('click', () => {
+document.querySelector('.header__nav-change-language')?.addEventListener('click', () => {
     const current = localStorage.getItem('lang');
     setLang(current === 'pt' ? 'en' : 'pt');
 });

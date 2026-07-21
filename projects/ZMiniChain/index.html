@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZMiniChain | Guilherme Marques</title>
+        <link rel="stylesheet" href="../../styles/style.css">
+        <script type="module" src="../../scripts/i18n.js" defer></script>
+        <script src="../../scripts/script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body class="project-detail-page" data-i18n-root="../../">
+        <header class="header">
+            <a href="../../"><h2><span class="header__terminal-logo animated-text">gui@developer:~$</span></h2></a>
+            <button class="header__nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="header__nav">
+                <a href="../../#hero"><h3 class="header__nav-home">Home</h3></a>
+                <a href="../../#projects"><h3 class="header__nav-projects">Projects</h3></a>
+                <h3 class="header__nav-change-language">Change Language</h3>
+            </nav>
+        </header>
+
+        <div class="dots-bg"></div>
+
+        <main class="project-detail">
+            <section class="project-detail__hero">
+                <div class="project-detail__intro">
+                    <p class="project-detail__eyebrow project-detail__zminichain-eyebrow"></p>
+                    <h1><span class="project-detail__owner">Sol-Gui</span> / ZMiniChain</h1>
+                    <p class="project-detail__summary project-detail__zminichain-summary"></p>
+                    <div class="project-detail__actions">
+                        <a href="https://github.com/Sol-Gui/Zminichain-API" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="project-detail__action-api"></span>
+                        </a>
+                        <a href="https://github.com/Sol-Gui/Zminichain-APP" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="project-detail__action-app"></span>
+                        </a>
+                    </div>
+                </div>
+                <terminal-window class="project-detail__terminal">
+                    <span class="tw-line"><span class="prompt">gui@developer:~$ </span><span class="cmd">trace chain --repo ZMiniChain</span></span>
+                    <span class="tw-line"><span class="ok project-detail__zminichain-terminal-1"></span></span>
+                    <span class="tw-line"><span class="ok project-detail__zminichain-terminal-2"></span></span>
+                    <span class="tw-line"><span class="ok project-detail__zminichain-terminal-3"></span></span>
+                </terminal-window>
+            </section>
+
+            <section class="project-detail__grid">
+                <article class="project-detail__panel">
+                    <h2 class="project-detail__section-overview"></h2>
+                    <p class="project-detail__zminichain-overview"></p>
+                </article>
+                <article class="project-detail__panel">
+                    <h2 class="project-detail__section-features"></h2>
+                    <ul>
+                        <li class="project-detail__zminichain-feature-1"></li>
+                        <li class="project-detail__zminichain-feature-2"></li>
+                        <li class="project-detail__zminichain-feature-3"></li>
+                        <li class="project-detail__zminichain-feature-4"></li>
+                    </ul>
+                </article>
+                <article class="project-detail__panel project-detail__panel-wide">
+                    <h2 class="project-detail__section-stack"></h2>
+                    <div class="project-detail__tags">
+                        <span>Java</span>
+                        <span>SHA-256</span>
+                        <span>REST</span>
+                        <span>WebSocket</span>
+                        <span>TypeScript</span>
+                        <span>React Router</span>
+                        <span>Docker</span>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

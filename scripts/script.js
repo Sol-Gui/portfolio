@@ -36,3 +36,33 @@ if (navToggle && headerNav) {
         });
     });
 }
+
+window.addEventListener("pageshow", () => {
+    document.body.classList.remove("page-leaving");
+
+    if (document.body.style.visibility === "visible") {
+        document.body.classList.add("page-ready");
+    }
+});
+
+document.addEventListener("click", (event) => {
+    const link = event.target.closest("a");
+
+    if (!link || event.defaultPrevented) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (link.target === "_blank" || link.hasAttribute("download")) return;
+
+    const destination = new URL(link.href, window.location.href);
+    const samePageAnchor = destination.origin === window.location.origin
+        && destination.pathname === window.location.pathname
+        && destination.hash;
+
+    if (destination.origin !== window.location.origin || samePageAnchor) return;
+
+    event.preventDefault();
+    document.body.classList.add("page-leaving");
+
+    window.setTimeout(() => {
+        window.location.href = destination.href;
+    }, 50);
+});
