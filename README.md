@@ -14,8 +14,6 @@ The current version focuses on a terminal-inspired interface, bilingual content,
 
 ## Roadmap
 
-- About-me section
-- Contact-me section
 - Fyera link and project page
 - Real-time status card
 - Local custom CSS styles

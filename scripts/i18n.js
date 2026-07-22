@@ -7,6 +7,11 @@ const [en, pt] = await Promise.all([
 
 const translations = { en, pt };
 
+const resumeFiles = {
+    en: `${i18nRoot}assets/resume-guilherme-marques.pdf`,
+    pt: `${i18nRoot}assets/cv-guilherme-marques.pdf`
+};
+
 const ptBrTimeZones = [
     'America/Sao_Paulo', 'America/Brasilia', 'America/Bahia', 'America/Belem',
     'America/Fortaleza', 'America/Maceio', 'America/Recife', 'America/Manaus',
@@ -26,6 +31,11 @@ function setLang(lang) {
                 : value;
         });
     });
+
+    document.querySelectorAll('[data-resume-link]').forEach(link => {
+        link.href = resumeFiles[lang];
+    });
+
     localStorage.setItem('lang', lang);
 }
 

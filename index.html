@@ -19,7 +19,8 @@
             <nav class="header__nav">
                 <a href="#hero"><h3 class="header__nav-home">Home</h3></a>
                 <a href="#projects"><h3 class="header__nav-projects">Projects</h3></a>
-                <h3 class="header__nav-contact">Contact</h3>
+                <a href="#about"><h3 class="header__nav-about">About</h3></a>
+                <a href="#contact-me"><h3 class="header__nav-contact">Contact</h3></a>
                 <h3 class="header__nav-change-language">Change Language</h3>
             </nav>
         </header>
@@ -28,6 +29,10 @@
         
         <section id="hero" class="hero">
             <div class="hero__info-container">
+                <p class="hero__availability">
+                    <span class="hero__availability-dot" aria-hidden="true"></span>
+                    <span class="hero__availability-text"></span>
+                </p>
                 <h1 class="hero__info-container__title">
                     <span class="hero__title-text"></span>
                     <span class="hero__name"></span>
@@ -40,8 +45,8 @@
                     <a href="https://github.com/Sol-Gui" target="_blank">
                         <i class="fa-brands fa-github github-icon"></i><p>GitHub</p>
                     </a>
-                    <a href="#contact-me" class="open-to-work">
-                        <i class="fa-solid fa-briefcase"></i><p class="hero__social-open-to-work"></p>
+                    <a href="assets/cv-guilherme-marques.pdf" class="resume-download" data-resume-link target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-file-arrow-down"></i><p class="hero__social-resume"></p>
                     </a>
                 </div>
             </div>
@@ -100,6 +105,13 @@
                     </div>
                 </terminal-window>
             </div>
+            <a class="hero__scroll-cue" href="#projects" aria-label="Scroll to projects">
+                <span class="hero__scroll-cue-label">scroll</span>
+                <span class="hero__scroll-cue-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+            </a>
         </section>
         <section id="projects" class="projects">
             <h1 class="projects__title"></h1>
@@ -141,6 +153,41 @@
                 </terminal-window>
                 </a>
             </div>
+        </section>
+        <section id="about" class="about">
+            <div class="about__inner">
+                <div class="about__intro">
+                    <p class="about__eyebrow"></p>
+                    <h1 class="about__title"></h1>
+                    <p class="about__summary"></p>
+                </div>
+
+                <div class="about__facts">
+                    <div class="about__fact">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span class="about__fact-location"></span>
+                    </div>
+                    <div class="about__fact">
+                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        <span class="about__fact-education"></span>
+                    </div>
+                    <div class="about__fact">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <span class="about__fact-focus"></span>
+                    </div>
+                    <div class="about__fact">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                        <span class="about__fact-learning"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-me" class="contact-me">
+            <p class="contact-me__eyebrow"></p>
+            <button class="contact-me__email" type="button" data-copy-email="dev.guimarques@gmail.com" aria-label="Copy email address">
+                dev.guimarques@gmail.com
+            </button>
+            <p class="contact-me__copy-status" aria-live="polite"></p>
         </section>
         <script defer>
             async function runTerminal() {

@@ -20,6 +20,7 @@ html {
     --project-star-color: #ffd43b;
     --project-accent-orange-color: #ffb86c;
     --project-card-height: 18rem;
+    --font-size-xs: 0.68rem;
     --font-size-sm: 0.75rem;
     --font-size-md: 0.8rem;
     --font-size-base: 1rem;
@@ -28,6 +29,14 @@ html {
     --font-size-3xl: 2rem;
     --font-size-4xl: 2.5rem;
     --font-size-5xl: 4.5rem;
+    --font-size-nav-toggle-icon: 1.2rem;
+    --font-size-nav-mobile: 0.85rem;
+    --font-size-hero-title-mobile: 2.35rem;
+    --font-size-hero-title-xs: 1.9rem;
+    --font-size-hero-subtitle-xs: 1.05rem;
+    --font-size-project-title-mobile: 1.75rem;
+    --font-size-social-text: var(--font-size-lg);
+    --font-size-social-icon: var(--font-size-3xl);
 }
 
 ::selection {
@@ -145,7 +154,7 @@ button:focus-visible {
     background-color: var(--default-highlight-background-color);
     color: var(--default-icons-color);
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: var(--font-size-nav-toggle-icon);
 }
 
 
@@ -164,7 +173,7 @@ button:focus-visible {
     align-items: flex-start;
     padding: 0 clamp(5rem, 8vw, 10em) 0 clamp(5rem, 8vw, 15rem);
     padding-top: 10rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.8rem;
     gap: clamp(3rem, 8vw, 10vw);
 }
 
@@ -174,6 +183,29 @@ button:focus-visible {
     flex-direction: column;
     justify-content: flex-start;
     min-width: 0;
+}
+
+.hero__availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: fit-content;
+    margin: 0 0 1rem;
+    padding: 0.42rem 0.72rem;
+    border: 1px solid rgba(251, 139, 127, 0.35);
+    border-radius: 999px;
+    background: rgba(13, 13, 13, 0.72);
+    color: var(--default-text-highlight-color2);
+    font-size: var(--font-size-base);
+    line-height: 1;
+}
+
+.hero__availability-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: var(--default-text-highlight-color2);
+    box-shadow: 0 0 0 0.25rem rgba(251, 139, 127, 0.13);
 }
 
 
@@ -252,7 +284,7 @@ button:focus-visible {
 
 .hero__info-container__socials p {
     color: var(--default-icons-color);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-social-text);
     margin-left: 0.5rem;
 }
 
@@ -263,15 +295,17 @@ button:focus-visible {
     justify-content: center;
     align-items: center;
     color: var(--default-icons-color);
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-social-icon);
 }
 
-.open-to-work i,
-.open-to-work p {
+.resume-download i,
+.resume-download p {
     color: var(--default-text-highlight-color1);
 }
 
 .hero__terminal {
+    --hero-terminal-font-size: var(--font-size-lg);
+
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -310,8 +344,57 @@ terminal-window {
 
 .hero__terminal #term {
     aspect-ratio: 1.55 / 1;
-    width: min(100%, 30rem);
+    width: min(100%, 34rem);
     min-height: clamp(15rem, 24vw, 18rem);
+    font-size: var(--hero-terminal-font-size);
+    line-height: 1.65;
+}
+
+.hero__scroll-cue {
+    grid-column: 1 / -1;
+    justify-self: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.5rem;
+    color: var(--default-text-color2);
+    font-size: var(--font-size-md);
+    opacity: 0.75;
+    animation: scrollCueFloat 1.6s ease-in-out infinite;
+}
+
+.hero__scroll-cue:hover,
+.hero__scroll-cue:focus-visible {
+    color: var(--default-text-highlight-color1);
+    opacity: 1;
+}
+
+.hero__scroll-cue-label {
+    color: currentColor;
+}
+
+.hero__scroll-cue-icon {
+    display: grid;
+    justify-items: center;
+    gap: 0;
+    color: var(--default-text-highlight-color1);
+    font-size: var(--font-size-sm);
+}
+
+.hero__scroll-cue-icon i:last-child {
+    margin-top: -0.3rem;
+    opacity: 0.45;
+}
+
+@keyframes scrollCueFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(0.675rem);
+    }
 }
 
 .hero__info-card {
@@ -361,12 +444,14 @@ terminal-window {
     }
 
     body,
-    .projects-interface {
+    .projects-interface,
+    .project-detail__carousel-track {
         transition: none;
     }
 
     .header__terminal-logo::after,
-    .tw-cursor {
+    .tw-cursor,
+    .hero__scroll-cue {
         animation: none;
     }
 }
@@ -515,6 +600,8 @@ terminal-window {
 }
 
 .projects {
+    --projects-terminal-font-size: var(--font-size-base);
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -524,7 +611,7 @@ terminal-window {
 }
 
 .projects h1 {
-    margin-top: 20vh;
+    margin-top: 10vh;
     text-align: center;
     font-size: var(--font-size-3xl);
 }
@@ -539,12 +626,19 @@ terminal-window {
     padding-bottom: 10vh;
 }
 
+.projects__title {
+    color: var(--project-accent-orange-color);
+    font-weight: 400;
+}
+
 
 .projects-terminal {
     width: 100%;
     height: 100%;
     min-height: 0;
     box-sizing: border-box;
+    font-size: var(--projects-terminal-font-size);
+    line-height: 1.55;
 }
 
 .projects-terminal-link {
@@ -615,8 +709,9 @@ terminal-window {
 
 .projects-interface h2 {
     margin: 0;
-    font-size: var(--font-size-base);
+    font-size: var(--projects-terminal-font-size);
     font-weight: 400;
+    overflow-wrap: anywhere;
     color: var(--default-text-highlight-color2);
 }
 
@@ -631,16 +726,18 @@ terminal-window {
 
 .projects-interface h3 {
     margin: 0;
-    font-size: var(--font-size-base);
+    font-size: var(--projects-terminal-font-size);
     max-width: 100%;
     font-weight: 400;
+    overflow-wrap: anywhere;
     color: var(--project-interface-text-color);
 }
 
 .projects-interface__stack {
     margin: 0;
-    font-size: var(--font-size-base);
+    font-size: var(--projects-terminal-font-size);
     font-weight: 400;
+    overflow-wrap: anywhere;
     color: var(--default-text-highlight-color2);
 }
 
@@ -650,11 +747,123 @@ terminal-window {
 
 .projects-interface__details-link {
     color: var(--default-text-highlight-color1);
-    font-size: var(--font-size-base);
+    font-size: var(--projects-terminal-font-size);
 }
 
 .projects-interface__details-link::after {
     content: " ->";
+}
+
+.about {
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(5.6rem, 11.2vw, 11.2rem) clamp(1rem, 6vw, 10rem) clamp(7rem, 14vw, 12.6rem);
+}
+
+.about__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.85fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.about__intro {
+    min-width: 0;
+}
+
+.about__eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--project-accent-orange-color);
+    font-size: var(--font-size-md);
+}
+
+.about__title {
+    margin: 0;
+    color: var(--default-text-highlight-color2);
+    font-size: var(--font-size-4xl);
+    line-height: 1.12;
+    max-width: 18ch;
+}
+
+.about__summary {
+    margin: 1.5rem 0 0;
+    color: var(--default-text-color2);
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    max-width: 62ch;
+}
+
+.about__facts {
+    display: grid;
+    gap: 0.85rem;
+    align-self: stretch;
+}
+
+.about__fact {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+    min-height: 3.5rem;
+    padding: 0.8rem 1rem;
+    border-left: 2px solid var(--default-terminal-border-color);
+    background-color: var(--default-subtle-surface-color);
+    color: var(--default-text-color2);
+    font-size: var(--font-size-base);
+    line-height: 1.55;
+}
+
+.about__fact i {
+    color: var(--default-text-highlight-color1);
+}
+
+.about__fact span {
+    overflow-wrap: anywhere;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(5.6rem, 11.2vw, 11.2rem) clamp(1rem, 6vw, 10rem) clamp(7rem, 14vw, 12.6rem);
+    text-align: center;
+}
+
+.contact-me__eyebrow {
+    margin: 0 0 1rem;
+    color: var(--project-accent-orange-color);
+    font-size: var(--font-size-md);
+}
+
+.contact-me__email {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--default-text-highlight-color1);
+    cursor: pointer;
+    font: inherit;
+    font-size: clamp(var(--font-size-2xl), 7vw, var(--font-size-5xl));
+    font-weight: 600;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.contact-me__email:hover,
+.contact-me__email:focus-visible,
+.contact-me__email.is-copied {
+    color: var(--default-text-highlight-color2);
+}
+
+.contact-me__copy-status {
+    min-height: 1.5rem;
+    margin: 0.8rem 0 0;
+    color: var(--default-text-color2);
+    font-size: var(--font-size-base);
 }
 
 .project-detail-page {
@@ -736,6 +945,133 @@ terminal-window {
 .project-detail__terminal {
     min-height: 17rem;
     align-self: stretch;
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-detail__carousel {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100%;
+    min-height: 17rem;
+}
+
+.project-detail__carousel-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--default-subtle-border-color);
+    color: var(--default-text-highlight-color2);
+    font-size: var(--font-size-md);
+}
+
+.project-detail__carousel-header span {
+    overflow-wrap: anywhere;
+}
+
+.project-detail__carousel-viewport {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.project-detail__carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.35s ease;
+}
+
+.project-detail__carousel-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.project-detail__carousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 12rem;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--default-subtle-border-color);
+}
+
+.project-detail__carousel-placeholder {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    height: 100%;
+    min-height: 12rem;
+    border: 1px dashed var(--default-terminal-border-color);
+    border-radius: 8px;
+    background-color: var(--default-subtle-surface-color);
+    color: var(--default-text-color2);
+    font-size: var(--font-size-base);
+}
+
+.project-detail__carousel-placeholder i {
+    color: var(--default-text-highlight-color1);
+    font-size: var(--font-size-3xl);
+}
+
+.project-detail__carousel-controls {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+}
+
+.project-detail__carousel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--default-terminal-border-color);
+    border-radius: 8px;
+    background-color: var(--default-highlight-background-color);
+    color: var(--default-icons-color);
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+}
+
+.project-detail__carousel-button:hover,
+.project-detail__carousel-button:focus-visible {
+    color: var(--default-text-highlight-color1);
+    border-color: var(--default-text-highlight-color1);
+}
+
+.project-detail__carousel-button:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+
+.project-detail__carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.project-detail__carousel-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--default-terminal-border-color);
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.project-detail__carousel-dot.is-active {
+    background-color: var(--default-text-highlight-color1);
 }
 
 .project-detail__grid {
@@ -800,6 +1136,67 @@ terminal-window {
     font-size: var(--font-size-md);
 }
 
+@media screen and (max-width: 1600px) {
+    .hero {
+        gap: clamp(3rem, 6vw, 6rem);
+        padding-inline: clamp(4rem, 6vw, 8rem);
+    }
+
+    .hero__terminal {
+        --hero-terminal-font-size: var(--font-size-base);
+
+        max-width: 32rem;
+    }
+
+    .hero__terminal #term {
+        width: min(100%, 32rem);
+    }
+
+    .projects-container {
+        gap: clamp(2rem, 4vw, 4rem);
+        max-width: 72rem;
+    }
+
+    .about__inner {
+        max-width: 72rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+        gap: clamp(2.5rem, 5vw, 4rem);
+        padding-inline: clamp(3rem, 5vw, 5rem);
+    }
+
+    .hero__terminal {
+        --hero-terminal-font-size: var(--font-size-md);
+
+        max-width: 30rem;
+    }
+
+    .hero__terminal #term {
+        width: min(100%, 28rem);
+    }
+
+    .projects {
+        --projects-terminal-font-size: var(--font-size-md);
+    }
+
+    .projects-container {
+        gap: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .about__inner {
+        grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.85fr);
+        gap: clamp(2rem, 5vw, 4rem);
+    }
+
+    .about__fact {
+        font-size: var(--font-size-md);
+    }
+}
+
 @media screen and (max-width: 900px) {
     .header {
         gap: 1.5rem;
@@ -812,7 +1209,7 @@ terminal-window {
     .hero {
         grid-template-columns: 1fr;
         padding: 8rem clamp(1.5rem, 6vw, 5rem) 0;
-        padding-bottom: clamp(15rem, 28vw, 20rem);
+        padding-bottom: clamp(21rem, 39.2vw, 28rem);
     }
 
     .hero__info-container__subtitle {
@@ -820,10 +1217,16 @@ terminal-window {
     }
 
     .hero__terminal {
+        --hero-terminal-font-size: var(--font-size-base);
+
         width: 100%;
         max-width: 42rem;
         align-items: stretch;
         justify-self: start;
+    }
+
+    .hero__terminal #term {
+        width: min(100%, 30rem);
     }
 
     .projects-container {
@@ -831,8 +1234,25 @@ terminal-window {
         max-width: 42rem;
     }
 
+    .projects {
+        --projects-terminal-font-size: var(--font-size-base);
+    }
+
     .projects-terminal-link {
         --project-card-height: 17rem;
+    }
+
+    .about__inner {
+        grid-template-columns: 1fr;
+        max-width: 42rem;
+    }
+
+    .about__title {
+        max-width: 100%;
+    }
+
+    .about__fact {
+        font-size: var(--font-size-base);
     }
 
     .project-detail__hero,
@@ -871,7 +1291,7 @@ terminal-window {
         align-items: flex-start;
         width: 100%;
         gap: 0.25rem;
-        font-size: 0.85rem;
+        font-size: var(--font-size-nav-mobile);
         padding-bottom: 0.75rem;
     }
 
@@ -885,11 +1305,11 @@ terminal-window {
 
     .hero {
         padding-top: 5rem;
-        padding-bottom: clamp(18rem, 54vw, 24rem);
+        padding-bottom: clamp(25.2rem, 75.6vw, 33.6rem);
     }
 
     .hero__info-container__title {
-        font-size: 2.35rem;
+        font-size: var(--font-size-hero-title-mobile);
     }
 
     .hero__info-container__subtitle {
@@ -898,6 +1318,10 @@ terminal-window {
 
     .hero__info-container__socials {
         flex-wrap: wrap;
+    }
+
+    .hero__terminal {
+        --hero-terminal-font-size: var(--font-size-sm);
     }
 
     terminal-window {
@@ -931,7 +1355,11 @@ terminal-window {
 
     .projects h1 {
         margin-top: 12vh;
-        font-size: 1.75rem;
+        font-size: var(--font-size-project-title-mobile);
+    }
+
+    .projects {
+        --projects-terminal-font-size: var(--font-size-md);
     }
 
     .projects-container {
@@ -952,6 +1380,18 @@ terminal-window {
         max-width: 100%;
     }
 
+    .about {
+        padding-inline: clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .about__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .about__fact {
+        font-size: var(--font-size-md);
+    }
+
     .project-detail {
         padding: 3rem 1rem 4rem;
     }
@@ -963,6 +1403,15 @@ terminal-window {
     .project-detail__terminal {
         min-height: 14rem;
     }
+
+    .project-detail__carousel {
+        min-height: 14rem;
+    }
+
+    .project-detail__carousel-slide img,
+    .project-detail__carousel-placeholder {
+        min-height: 10rem;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -972,15 +1421,19 @@ terminal-window {
 
     .hero {
         padding-inline: 1rem;
-        padding-bottom: 22rem;
+        padding-bottom: 30.8rem;
     }
 
     .hero__info-container__title {
-        font-size: 1.9rem;
+        font-size: var(--font-size-hero-title-xs);
     }
 
     .hero__info-container__subtitle {
-        font-size: 1.05rem;
+        font-size: var(--font-size-hero-subtitle-xs);
+    }
+
+    .hero__terminal {
+        --hero-terminal-font-size: var(--font-size-xs);
     }
 
     .hero__terminal #term {
@@ -1008,6 +1461,10 @@ terminal-window {
         flex-direction: column;
     }
 
+    .projects {
+        --projects-terminal-font-size: var(--font-size-sm);
+    }
+
     .projects-interface__header {
         align-items: flex-start;
         grid-template-columns: minmax(0, 1fr) auto;
@@ -1019,7 +1476,7 @@ terminal-window {
     }
 
     .projects-interface h2 {
-        font-size: var(--font-size-base);
+        font-size: var(--projects-terminal-font-size);
     }
 
     .projects-terminal-link {
@@ -1029,5 +1486,31 @@ terminal-window {
     .projects-interface {
         gap: 0.85rem;
         padding: 1rem;
+    }
+
+    .about {
+        padding-inline: 1rem;
+    }
+
+    .about__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .about__fact {
+        font-size: var(--font-size-sm);
+        padding: 0.8rem;
+    }
+
+    .project-detail__carousel-header {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-detail__carousel-header .projects-interface__window-icons {
+        grid-column: auto;
+    }
+
+    .project-detail__carousel-controls {
+        gap: 0.75rem;
+        padding-inline: 0.8rem;
     }
 }
