@@ -563,23 +563,23 @@ terminal-window {
 
 .hero__info-card-stat {
 
-    padding: 0.5rem;
+    padding: 0.55rem 0.6rem;
 
-    border-radius: 18px;
+    border-radius: 8px;
 
     background: var(--default-subtle-surface-color);
 
     border: 1px solid var(--default-subtle-border-color);
 }
 
-.hero__info-card-stat span {
+.hero__info-card-stat > span {
 
     display: block;
 
     margin-bottom: .5rem;
     margin-left: .1rem;
 
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
 
     color: var(--default-text-color2);
 
@@ -590,9 +590,30 @@ terminal-window {
 
     margin: 0;
 
-    font-size: var(--font-size-lg);
-
     color: var(--default-text-highlight-color1);
+}
+
+.hero__info-card-duration {
+    display: flex;
+    flex-direction: column;
+    gap: 0.18rem;
+    line-height: 1.25;
+}
+
+.hero__info-card-duration__months {
+    font-size: var(--font-size-lg);
+}
+
+.hero__info-card-duration__days {
+    width: fit-content;
+    padding-top: 0.18rem;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: var(--default-text-color2);
+    font-size: var(--font-size-base);
+}
+
+.hero__info-card-duration--zero {
+    font-size: var(--font-size-lg);
 }
 
 .hero__info-card-update {

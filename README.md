@@ -18,3 +18,4 @@ The current version focuses on a terminal-inspired interface, bilingual content,
 - Real-time status card
 - Local custom CSS styles
 - Improved texts across the site
+- No JS index.html
