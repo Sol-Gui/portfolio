@@ -62,13 +62,20 @@ body {
     letter-spacing: 0.02em;
     margin: 0;
     padding: 0;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(0.6rem);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.05s ease, transform 0.05s ease;
 }
 
-body.page-ready {
+html.js body {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0.6rem);
+}
+
+html.js body.page-ready {
+    visibility: visible;
     opacity: 1;
     transform: translateY(0);
 }

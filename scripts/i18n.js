@@ -146,6 +146,8 @@ function updateTimelineStats(lang) {
 }
 
 function setLang(lang) {
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
     Object.keys(translations[lang]).forEach(className => {
         document.querySelectorAll('.' + className).forEach(el => {
             const value = translations[lang][className];

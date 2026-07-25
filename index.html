@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guilherme Marques</title>
+        <script>document.documentElement.classList.add('js');</script>
         <link rel="stylesheet" href="styles/style.css">
         <script type="module" src="scripts/i18n.js" defer></script>
         <script src="scripts/terminal.js"></script>
@@ -13,15 +14,15 @@
     <body>
         <header class="header">
             <h2><span class="header__terminal-logo animated-text">gui@developer:~$</span></h2>
-            <button class="header__nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <button class="header__nav-toggle" type="button" aria-label="Abrir navegação" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <nav class="header__nav">
-                <a href="#hero"><h3 class="header__nav-home">Home</h3></a>
-                <a href="#projects"><h3 class="header__nav-projects">Projects</h3></a>
-                <a href="#about"><h3 class="header__nav-about">About</h3></a>
-                <a href="#contact-me"><h3 class="header__nav-contact">Contact</h3></a>
-                <h3 class="header__nav-change-language">Change Language</h3>
+                <a href="#hero"><h3 class="header__nav-home">Início</h3></a>
+                <a href="#projects"><h3 class="header__nav-projects">Projetos</h3></a>
+                <a href="#about"><h3 class="header__nav-about">Sobre</h3></a>
+                <a href="#contact-me"><h3 class="header__nav-contact">Contate-me</h3></a>
+                <h3 class="header__nav-change-language">Mudar idioma</h3>
             </nav>
         </header>
 
@@ -31,13 +32,13 @@
             <div class="hero__info-container">
                 <p class="hero__availability">
                     <span class="hero__availability-dot" aria-hidden="true"></span>
-                    <span class="hero__availability-text"></span>
+                    <span class="hero__availability-text">Aberto a oportunidades</span>
                 </p>
                 <h1 class="hero__info-container__title">
-                    <span class="hero__title-text"></span>
-                    <span class="hero__name"></span>
+                    <span class="hero__title-text">Olá! Me chamo </span>
+                    <span class="hero__name">Guilherme</span>
                 </h1>
-                <h2 class="hero__info-container__subtitle"></h2>
+                <h2 class="hero__info-container__subtitle">Estudante de Ciência e Tecnologia na <span>UNIFESP</span>, com foco em Ciência da Computação e desenvolvimento backend. Atualmente desenvolvendo <a href='#Fyera' target='_blank' rel='noopener noreferrer'><span id="fyera-link">Fyera</span></a>, um assistente financeiro pessoal com IA. Tenho experiência com <span>Java</span>, <span>Spring Boot</span>, <span>TypeScript</span>, <span>Node.js</span> e <span>Python</span>. Tenho interesse em <span>sistemas de baixo nível</span> e estou explorando <span>Go</span>.</h2>
                 <div class="hero__info-container__socials">
                     <a href="https://www.linkedin.com/in/gui-r-marques/" target="_blank">
                         <i class="fa-brands fa-linkedin linkedin-icon"></i><p>LinkedIn</p>
@@ -46,7 +47,7 @@
                         <i class="fa-brands fa-github github-icon"></i><p>GitHub</p>
                     </a>
                     <a href="assets/cv-guilherme-marques.pdf" class="resume-download" data-resume-link target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-file-arrow-down"></i><p class="hero__social-resume"></p>
+                        <i class="fa-solid fa-file-arrow-down"></i><p class="hero__social-resume">Currículo</p>
                     </a>
                 </div>
             </div>
@@ -58,11 +59,9 @@
                             <img src="https://avatars.githubusercontent.com/u/177280156?s=400&u=4252e8dae775fe27f349f5d77b13835507336bc9&v=4" class="hero__info-card-avatar" alt="Guilherme Marques">
 
                             <div class="hero__info-card-identity">
-                                <h3 class="hero__info-card-name">
-                                </h3>
+                                <h3 class="hero__info-card-name">Guilherme Marques</h3>
 
-                                <p class="hero__info-card-role">
-                                </p>
+                                <p class="hero__info-card-role">Ciência e Tecnologia @ UNIFESP</p>
                             </div>
                         </div>
 
@@ -70,17 +69,17 @@
 
                             <div class="hero__info-card-detail">
                                 <i class="fa-solid fa-code"></i>
-                                <span class="hero__info-card-detail-backend"></span>
+                                <span class="hero__info-card-detail-backend">Desenvolvimento Backend</span>
                             </div>
 
                             <div class="hero__info-card-detail">
                                 <i class="fa-solid fa-microchip"></i>
-                                <span class="hero__info-card-detail-systems"></span>
+                                <span class="hero__info-card-detail-systems">Sistemas de baixo nível</span>
                             </div>
 
                             <div class="hero__info-card-detail">
                                 <i class="fa-solid fa-calendar"></i>
-                                <span class="hero__info-card-detail-period"></span>
+                                <span class="hero__info-card-detail-period">2026 - 2028</span>
                             </div>
 
                         </div>
@@ -88,25 +87,24 @@
                         <div class="hero__info-card-stats">
 
                             <div class="hero__info-card-stat">
-                                <span class="hero__info-card-stat-elapsed-label"></span>
-                                <h4 class="hero__info-card-stat-elapsed-value"></h4>
+                                <span class="hero__info-card-stat-elapsed-label">Decorrido</span>
+                                <h4 class="hero__info-card-stat-elapsed-value">5 meses e 13 dias</h4>
                             </div>
 
                             <div class="hero__info-card-stat">
-                                <span class="hero__info-card-stat-remaining-label"></span>
-                                <h4 class="hero__info-card-stat-remaining-value"></h4>
+                                <span class="hero__info-card-stat-remaining-label">Restante</span>
+                                <h4 class="hero__info-card-stat-remaining-value">30 meses e 17 dias</h4>
                             </div>
 
                         </div>
 
-                        <p class="hero__info-card-update">
-                        </p>
+                        <p class="hero__info-card-update">Última atualização: 23 de junho de 2026</p>
 
                     </div>
                 </terminal-window>
             </div>
-            <a class="hero__scroll-cue" href="#projects" aria-label="Scroll to projects">
-                <span class="hero__scroll-cue-label">scroll</span>
+            <a class="hero__scroll-cue" href="#projects" aria-label="Rolar para projetos">
+                <span class="hero__scroll-cue-label">rolar</span>
                 <span class="hero__scroll-cue-icon" aria-hidden="true">
                     <i class="fa-solid fa-chevron-down"></i>
                     <i class="fa-solid fa-chevron-down"></i>
@@ -114,7 +112,7 @@
             </a>
         </section>
         <section id="projects" class="projects">
-            <h1 class="projects__title"></h1>
+            <h1 class="projects__title">Veja meus principais projetos</h1>
             <div class="projects-container">
                 <a class="projects-terminal-link" href="projects/JacacultMap/">
                 <terminal-window class="projects-terminal">
@@ -125,12 +123,12 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <h2 class="projects-interface__title-jacacultmap"></h2>
+                            <h2 class="projects-interface__title-jacacultmap"><span class="projects-interface__owner">Sol-Gui</span> / JacacultMap</h2>
                             <i class="fa-solid fa-star" aria-hidden="true"></i>
                         </div>
-                        <h3 class="projects-interface__description-jacacultmap"></h3>
-                        <p class="projects-interface__stack projects-interface__stack-jacacultmap"></p>
-                        <span class="projects-interface__details-link projects-interface__details-link-jacacultmap"></span>
+                        <h3 class="projects-interface__description-jacacultmap">Rastreador de eventos culturais para Jacareí, desenvolvido como Trabalho de Conclusão de Curso</h3>
+                        <p class="projects-interface__stack projects-interface__stack-jacacultmap"><span>React Native</span> / <span>Node.js</span> / Express / MongoDB</p>
+                        <span class="projects-interface__details-link projects-interface__details-link-jacacultmap">Abrir estudo do projeto</span>
                     </div>
                 </terminal-window>
                 </a>
@@ -143,12 +141,12 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <h2 class="projects-interface__title-zminichain"></h2>
+                            <h2 class="projects-interface__title-zminichain"><span class="projects-interface__owner">Sol-Gui</span> / ZMiniChain</h2>
                             <i class="fa-solid fa-star" aria-hidden="true"></i>
                         </div>
-                        <h3 class="projects-interface__description-zminichain"></h3>
-                        <p class="projects-interface__stack projects-interface__stack-zminichain"></p>
-                        <span class="projects-interface__details-link projects-interface__details-link-zminichain"></span>
+                        <h3 class="projects-interface__description-zminichain">Simulação de blockchain com seu próprio agregador RESTful</h3>
+                        <p class="projects-interface__stack projects-interface__stack-zminichain"><span>Java</span> / REST / WebSocket / TypeScript</p>
+                        <span class="projects-interface__details-link projects-interface__details-link-zminichain">Abrir estudo do projeto</span>
                     </div>
                 </terminal-window>
                 </a>
@@ -157,34 +155,34 @@
         <section id="about" class="about">
             <div class="about__inner">
                 <div class="about__intro">
-                    <p class="about__eyebrow"></p>
-                    <h1 class="about__title"></h1>
-                    <p class="about__summary"></p>
+                    <p class="about__eyebrow">Sobre mim</p>
+                    <h1 class="about__title">Construindo sistemas backend práticos</h1>
+                    <p class="about__summary">Gosto de transformar ideias em serviços, APIs e ferramentas simples, bem estruturadas e fáceis de manter. Meu foco está em desenvolvimento backend, fundamentos de Ciência da Computação e programação de sistemas, sempre buscando entender como o software funciona além das abstrações.</p>
                 </div>
 
                 <div class="about__facts">
                     <div class="about__fact">
                         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        <span class="about__fact-location"></span>
+                        <span class="about__fact-location">Brasil</span>
                     </div>
                     <div class="about__fact">
                         <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                        <span class="about__fact-education"></span>
+                        <span class="about__fact-education">Ciência e Tecnologia @ UNIFESP</span>
                     </div>
                     <div class="about__fact">
                         <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <span class="about__fact-focus"></span>
+                        <span class="about__fact-focus">Java, Spring Boot, TypeScript, Node.js, React e Python</span>
                     </div>
                     <div class="about__fact">
                         <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-                        <span class="about__fact-learning"></span>
+                        <span class="about__fact-learning">Aprendendo Go, programação de sistemas e arquitetura backend</span>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact-me" class="contact-me">
-            <p class="contact-me__eyebrow"></p>
-            <button class="contact-me__email" type="button" data-copy-email="dev.guimarques@gmail.com" aria-label="Copy email address">
+            <p class="contact-me__eyebrow">Contato</p>
+            <button class="contact-me__email" type="button" data-copy-email="dev.guimarques@gmail.com" aria-label="Copiar endereço de email">
                 dev.guimarques@gmail.com
             </button>
             <p class="contact-me__copy-status" aria-live="polite"></p>
